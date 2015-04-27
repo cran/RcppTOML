@@ -1,0 +1,93 @@
+2015-04-27  Dirk Eddelbuettel  <edd@debian.org>
+
+	* DESCRIPTION: More quoting of terms, rolled Version and Date
+
+	* src/parse.cpp (local_timegm): Expand if defined() to Apple and BSDs
+
+2015-04-25  Dirk Eddelbuettel  <edd@debian.org>
+
+	* DESCRIPTION: Renamed to RcppTOML, rolled Version and Date
+	* NAMESPACE: Renamed to RcppTOML
+	* README.md: Ditto
+	* man/RcppTOML-package.Rd: Ditto
+	* tests/*: Ditto
+
+	* R/parseToml.R: Main function is parseTOML() now, keep aliases
+
+	* README.md: Update current status, added Travis CI shield
+
+	* man/RcppTOML-package.Rd: Expanded examples section and aliases
+
+	* man/parseTOML.Rd: New manual page for main function
+
+	* R/parseToml.R: Support verbose argument
+
+	* src/parse.cpp (local_timegm): Add wrapper for timegm() using TZ
+	resetting dance for OSs which do not have timegm()
+
+2015-04-24  Dirk Eddelbuettel  <edd@debian.org>
+
+	* DESCRIPTION (OS_type): Set to unix while Windows still labours
+	along with a non-C++11 compiler
+
+	* src/parse.cpp (getValue): Use timegm() as we are translating a UTC
+	time into time_t, not a local time
+
+	* tests/*.R: Simplify tests call as we no longer need explicit sorting
+	* tests/*.Rout.save: Update reference output as well
+
+	* .travis.yml: Set g++-4.9 via update-alternatives
+
+2015-04-23  Dirk Eddelbuettel  <edd@debian.org>
+
+	* src/Makevars: Enable compile-time option to use std::map now that
+	out pull request to cpptoml.h has been accepted
+	* R/parseToml.R: Beginnings of an R class wrapper with simple print
+	and summary methods
+
+2015-04-20  Dirk Eddelbuettel  <edd@debian.org>
+
+	* src/parse.cpp (tomlparse): Added one missing if (verbose)
+
+2015-04-19  Dirk Eddelbuettel  <edd@debian.org>
+
+	* R/sort.R (.sort): Add internal sort function to recursively sort
+	objects returned as the C++ unordered_hash representation leads to
+	different returns on different platforms (eg 32 vs 64 Linux)
+
+2015-04-04  Dirk Eddelbuettel  <edd@debian.org>
+
+	* DESCRIPTION (OS_type): Mention need for a genuine C++11 compiler
+
+	* tests/toml_example.toml: Added regression tests from toml-lang repo
+	* tests/toml_hard_example.toml: Ditto
+	* teststoml_example-v0.4.0.toml: Ditto (with line 56 edited)
+	* tests/tomlExamples.R: Added caller for toml examples
+	* tests/tomlExamples.Rout.save: Added reference output
+
+2015-04-03  Dirk Eddelbuettel  <edd@debian.org>
+
+	* .travis.yml: Added, later disabled as Travis appears to be
+	currently borked for new projects requiring C++11
+
+2015-04-02  Dirk Eddelbuettel  <edd@debian.org>
+
+	* src/parse.cpp: Simplification / correction to ordering; recursion
+	into table_array
+
+2015-04-02  Dirk Eddelbuettel  <edd@debian.org>
+
+	* src/parse.cpp: Now with nested arrays
+
+2015-04-01  Dirk Eddelbuettel  <edd@debian.org>
+
+	* src/parse.cpp: Arrays are now 'flattened' into vectors
+
+2015-03-31  Dirk Eddelbuettel  <edd@debian.org>
+
+	* src/parse.cpp: Basic array functionality; nested tables; basic
+	value types, 'verbose' flag
+
+2015-03-30  Dirk Eddelbuettel  <edd@debian.org>
+
+	* src/parse.cpp: Beginnings of package; use StretchyList

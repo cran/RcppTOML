@@ -1,0 +1,55 @@
+
+R version 3.2.0 (2015-04-16) -- "Full of Ingredients"
+Copyright (C) 2015 The R Foundation for Statistical Computing
+Platform: x86_64-pc-linux-gnu (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+> 
+> print(RcppTOML::tomlparse("arrays.toml"))
+Other: variety
+Other: variety
+List of 6
+ $ array   :List of 6
+  ..$ key1: int [1:3] 1 2 3
+  ..$ key2: chr [1:3] "red" "yellow" "green"
+  ..$ key3:List of 2
+  .. ..$ : int [1:2] 1 2
+  .. ..$ : int [1:3] 3 4 5
+  ..$ key4:List of 2
+  .. ..$ : int [1:2] 1 2
+  .. ..$ : chr [1:3] "a" "b" "c"
+  ..$ key5: int [1:3] 1 2 3
+  ..$ key6: int [1:2] 1 2
+ $ fruit   :List of 3
+  ..$ name    : chr "apple"
+  ..$ physical:List of 2
+  .. ..$ color: chr "red"
+  .. ..$ shape: chr "round"
+  ..$         : chr "variety"
+ $ fruit   :List of 2
+  ..$ name: chr "banana"
+  ..$     : chr "variety"
+ $ products:List of 2
+  ..$ name: chr "Hammer"
+  ..$ sku : int 738594937
+ $ products: list()
+ $ products:List of 3
+  ..$ color: chr "gray"
+  ..$ name : chr "Nail"
+  ..$ sku  : int 284758393
+NULL
+> 
+> proc.time()
+   user  system elapsed 
+  0.343   0.021   0.354 

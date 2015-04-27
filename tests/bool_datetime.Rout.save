@@ -1,0 +1,32 @@
+
+R version 3.2.0 (2015-04-16) -- "Full of Ingredients"
+Copyright (C) 2015 The R Foundation for Statistical Computing
+Platform: i686-pc-linux-gnu (32-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+> 
+> print(RcppTOML::tomlparse("bool_datetime.toml"))
+List of 2
+ $ boolean :List of 2
+  ..$ False: logi FALSE
+  ..$ True : logi TRUE
+ $ datetime:List of 3
+  ..$ key1: POSIXct[1:1], format: "1979-05-27 07:32:00"
+  ..$ key2: POSIXct[1:1], format: "1979-05-27 07:32:00"
+  ..$ key3: POSIXct[1:1], format: "1979-05-27 07:32:00"
+NULL
+> 
+> proc.time()
+   user  system elapsed 
+  0.404   0.464   0.393 
