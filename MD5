@@ -1,12 +1,12 @@
-c981b7cfb6e274336816975f03d2a27c *ChangeLog
-1a9747005f1e11fdf104215b3f877a2d *DESCRIPTION
+2bc717fe015218adf84f0f6734663579 *ChangeLog
+315a4c12ac687c315163d48c14ab21c3 *DESCRIPTION
 9640e63441d1bd10427af98a8ec49844 *NAMESPACE
 b38d523c61ed70c3653adaf9b3a1b10c *R/RcppExports.R
 cd2c1519fcbbb3c7bc8571a9ae9236d8 *R/parseToml.R
 b6c4267c84f2644e3bf8b362a18d6ad6 *R/sort.R
 f390b8df09483da42f9155dce3f0f6ab *README.md
 de0c4886de504a4e34c64ec906431934 *cleanup
-9175d5637b489913eed91fd8612c644b *inst/include/cpptoml.h
+00c6fb5ce7959aecbf83b14efbdb9dd3 *inst/include/cpptoml.h
 2f404e57fbf1e01e8c5da012b9fd7dd2 *inst/toml/ex1.toml
 4a8de227a8379c319a7cc72419c91642 *inst/toml/ex2.toml
 8ba4380f4291ebe34e854796c235a065 *inst/toml/ex3.toml
@@ -18,7 +18,7 @@ ab88821b38f109c60f8ee59919891348 *inst/toml/strings.toml
 642ed26bf7af795eb735fbdebabe6d10 *man/parseTOML.Rd
 478972599843c382d7c8884481b84c9b *src/Makevars
 491bc7583013fe061e6d1b9a6efed8b7 *src/RcppExports.cpp
-05b0d33e203e6c6c293310ef3402a580 *src/parse.cpp
+0ced589bae39195df624eac5d63c6ab5 *src/parse.cpp
 8185a8b7a599eda0fc93a1e53e4842d0 *tests/arrays.R
 20ff9c99206b33facfe16ecf1b6a1819 *tests/arrays.Rout.save
 4c0ba4af235fa244e3d888dc3153a392 *tests/arrays.toml
@@ -26,8 +26,8 @@ ab88821b38f109c60f8ee59919891348 *inst/toml/strings.toml
 c3868b3299340399f255ccfc69752e16 *tests/bool_datetime.Rout.save
 b35a7d3d1188f852df79cb56b45f057f *tests/bool_datetime.toml
 7853f0fe2e32c5d80bed9747dc4e09d9 *tests/float.R
-0db1f3850623831d504ea7560c657ade *tests/float.Rout.save
-3422e60c149644b53cefb8373e86d059 *tests/float.toml
+26fec935ab8e8dbfd701e4c498c8f652 *tests/float.Rout.save
+98c15766ffcfd93f81fcbba3e6fdb1f2 *tests/float.toml
 b92e3fd5fa72a9dd310e11ea00574d5b *tests/integer.R
 5f344c29a9c1004fab6172ccc68b1fad *tests/integer.Rout.save
 edbf0dd24dae72644d2e0a73c10e1acb *tests/integer.toml
@@ -38,7 +38,7 @@ c521f950d620b4a6a1a21177544b8354 *tests/strings.R
 1f2467b54333f3587b3ee057cba00fb0 *tests/tables.Rout.save
 5072b4d7309d7e7e4129dd78f6b6aab4 *tests/tables.toml
 2278283f41f8b6fcf92f9cf8fde18947 *tests/tomlExamples.R
-d1fccb921ee7cd015cec84cbf125c98a *tests/tomlExamples.Rout.save
-f039223129130e4e6b66b98fd48abfc1 *tests/toml_example-v0.4.0.toml
+3da47a21161ec07130ef6499db12857e *tests/tomlExamples.Rout.save
+1258c54536c3ac3b109ac6838a6a1ee7 *tests/toml_example-v0.4.0.toml
 7ac85a8fc59c76ee1a3cf2e31968435e *tests/toml_example.toml
 a771cda2fd660a0725c6491f6de8eb70 *tests/toml_hard_example.toml

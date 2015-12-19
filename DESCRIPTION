@@ -1,8 +1,8 @@
 Package: RcppTOML
 Type: Package
 Title: 'Rcpp' Bindings to Parser for Tom's Obvious Markup Language
-Version: 0.0.4
-Date: 2015-07-16
+Version: 0.0.5
+Date: 2015-12-19
 Author: Dirk Eddelbuettel
 Maintainer: Dirk Eddelbuettel <edd@debian.org>
 Description: The configuration format defined by 'TOML' (which expands to
@@ -18,6 +18,6 @@ License: GPL (>= 2)
 Imports: Rcpp (>= 0.11.5)
 LinkingTo: Rcpp
 NeedsCompilation: yes
-Packaged: 2015-07-16 11:31:22.449146 UTC; edd
+Packaged: 2015-12-19 13:33:41.19375 UTC; edd
 Repository: CRAN
-Date/Publication: 2015-07-16 14:24:23
+Date/Publication: 2015-12-19 16:15:18
