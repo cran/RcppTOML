@@ -160,11 +160,28 @@ SEXP collapsedList(Rcpp::List ll) {
     switch(TYPEOF(*it)) {
         case REALSXP: {
             Rcpp::NumericVector v(ll.begin(), ll.end());
+            Rcpp::RObject ro = ll[0];
+            if (ro.hasAttribute("class")) {
+                Rcpp::CharacterVector cv = ro.attr("class");
+                if ((cv.size() == 1) && std::string(cv[0]) == "Date") {
+                    Rcpp::DateVector dv(v);
+                    return dv;
+                }
+                if ((cv.size() == 2) && std::string(cv[1]) == "POSIXt") {
+                    Rcpp::DatetimeVector dtv(v);
+                    return dtv;
+                }
+            }
             return v;
             break;              // not reached ...
         }
         case INTSXP: {
             Rcpp::IntegerVector v(ll.begin(), ll.end());
+            return v;
+            break;              // not reached ...
+        }
+        case LGLSXP: {
+            Rcpp::LogicalVector v(ll.begin(), ll.end());
             return v;
             break;              // not reached ...
         }
@@ -265,13 +282,15 @@ Rcpp::List tomlparseImpl(const std::string input, bool verbose=false, bool fromf
         if (p.second->is_table_array()) {
             if (verbose) Rcpp::Rcout << "TableArray: " << p.first << std::endl;
             //auto ga = std::dynamic_pointer_cast<cpptoml::table_array>(p.second);
+            Rcpp::StretchyList l;
             auto arr = g->get_table_array(p.first)->get();
             auto ait = arr.begin();
             while (ait != arr.end()) {
                 auto ta = std::dynamic_pointer_cast<cpptoml::table>(*ait);
-                sl.push_back (Rcpp::Named(p.first) = getTable(ta, verbose));
+                l.push_back (getTable(ta, verbose));
                 ++ait;
             }
+            sl.push_back(Rcpp::Named(p.first) = l);
 
         } else if (p.second->is_table()) {
             auto ga = std::dynamic_pointer_cast<cpptoml::table>(p.second);

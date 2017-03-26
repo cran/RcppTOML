@@ -3,7 +3,23 @@
 \newcommand{\ghpr}{\href{https://github.com/eddelbuettel/rcpptoml/pull/#1}{##1}}
 \newcommand{\ghit}{\href{https://github.com/eddelbuettel/rcpptoml/issues/#1}{##1}}
 
-\section{Changes in version 0.1.1 (2017-xx-yy)}{
+\section{Changes in version 0.1.2 (2017-03-26)}{
+  \itemize{
+    \item Dates and Datetimes in arrays in the input now preserve their
+    types instead of converting to numeric vectors (\ghit{13})
+    \item Boolean vectors are also correctly handled (\ghit{14})
+    \item TableArray types are now stored as lists in a single named
+    list (\ghit{15})
+    \item The README.md file was expanded with an example and
+    screenshot.
+    \item Added file \code{init.c} with calls to \code{R_registerRoutines()}
+    \code{and R_useDynamicSymbols()}; also use \code{.registration=TRUE}
+    in \code{useDynLib} in \code{NAMESPACE}
+    \item Two example files were updated.
+  }
+}
+
+\section{Changes in version 0.1.1 (2017-02-12)}{
   \itemize{
     \item Synchronized multiple times with ccptoml upstream adding
     support for local datetime and local date and more (PR \ghpr{9},
