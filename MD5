@@ -1,11 +1,11 @@
-fe8892c4e3673a4d026a60ad2dd286a2 *ChangeLog
-7d66034fbfff653f2cb373c48434025b *DESCRIPTION
+dbc58eb0477a4877da7c4067e404d924 *ChangeLog
+43610cd912e2ab56922d5c6e964e5363 *DESCRIPTION
 8695c7fd3ad2d90aca32137a3da7c0f1 *NAMESPACE
 e9ffc3403846dfb1e4f589c296f5f588 *R/RcppExports.R
-215d5d02672b306d41f4b0c734adb887 *R/parseToml.R
+92607d8bea8d9c0c0ca40037db5f0051 *R/parseToml.R
 6919a1816de40613d0944e761d586e1a *README.md
 de0c4886de504a4e34c64ec906431934 *cleanup
-c62fd5575fbd9f8b6460f8a8a486532b *inst/NEWS.Rd
+9cf3b3f84a419f1ee69d5ab3d0ceb8d4 *inst/NEWS.Rd
 f5e7796bcbb23f3d63658fcc3dce1599 *inst/include/cpptoml.h
 2f404e57fbf1e01e8c5da012b9fd7dd2 *inst/toml/ex1.toml
 2edae36993ce3b693fe0af875dfa70b7 *inst/toml/ex2.toml
@@ -20,9 +20,9 @@ ab88821b38f109c60f8ee59919891348 *inst/toml/strings.toml
 8e4745642644de963fbb3588902356b3 *src/Makevars.win
 e0ba158ae0a96b67f4b7f604bf7ac3bb *src/RcppExports.cpp
 7e3007e43c79d044c8fcfc39d06874ee *src/init.c
-b8f5824c4e9ca86de3c4e46d94cf003c *src/parse.cpp
+09499ebce8531bb64099313870e177f7 *src/parse.cpp
 8185a8b7a599eda0fc93a1e53e4842d0 *tests/arrays.R
-d3d06b8db61ef71e703966009c4aa1e7 *tests/arrays.Rout.save
+87f8f46e78b92fa2dfb0de229859c266 *tests/arrays.Rout.save
 4c0ba4af235fa244e3d888dc3153a392 *tests/arrays.toml
 48567620fb51f1da0c81b0d82141e2e9 *tests/bool_datetime.R
 22b5c9da5df2ef34340d92886f67f16f *tests/bool_datetime.Rout.save
@@ -40,7 +40,7 @@ c521f950d620b4a6a1a21177544b8354 *tests/strings.R
 09eed0d31e2c7a05e8a1bc33f12bdf4a *tests/tables.Rout.save
 5072b4d7309d7e7e4129dd78f6b6aab4 *tests/tables.toml
 2278283f41f8b6fcf92f9cf8fde18947 *tests/tomlExamples.R
-851289af9735d030b08a3a1b0de72f17 *tests/tomlExamples.Rout.save
+9f85d8d5c0dfc93f5b37a4219070a553 *tests/tomlExamples.Rout.save
 1258c54536c3ac3b109ac6838a6a1ee7 *tests/toml_example-v0.4.0.toml
 7ac85a8fc59c76ee1a3cf2e31968435e *tests/toml_example.toml
 a771cda2fd660a0725c6491f6de8eb70 *tests/toml_hard_example.toml
