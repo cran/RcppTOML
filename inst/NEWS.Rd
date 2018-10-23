@@ -3,6 +3,22 @@
 \newcommand{\ghpr}{\href{https://github.com/eddelbuettel/rcpptoml/pull/#1}{##1}}
 \newcommand{\ghit}{\href{https://github.com/eddelbuettel/rcpptoml/issues/#1}{##1}}
 
+\section{Changes in version 0.1.4 (2018-10-23)}{
+  \itemize{
+    \item Spelling / grammar fixes to README (Jon Calder in \ghpr{18})
+    \item Cast from \code{StretchyList} to \code{List} ensures lists
+    appear as \code{List} objects in R
+    \item Support optional \code{includize} pre-processor for recursive
+    includes by Dan Dillon as a header-only library (\ghpr{21} and \ghpr{22}) 
+    \item Support \code{includize} argument in R and C++ parser interface
+    \item Added a few more \code{#nocov} tags for coverage \ghpr{23}
+    \item Synchronized with new upstream (\ghpr{25})
+    \href{https://github.com/skystrife/cpptoml}{cpptoml} version supporting the
+    \href{https://github.com/toml-lang/toml/blob/master/versions/en/toml-v0.5.0.md}{TOMP v0.5.0} 
+    specification. 
+  }
+}
+
 \section{Changes in version 0.1.3 (2017-04-25)}{
   \itemize{
     \item Nested TableArray types are now correctly handled (\ghit{16})

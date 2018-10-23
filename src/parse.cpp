@@ -22,6 +22,11 @@
 #include <cpptoml.h>
 #include <unistd.h>
 
+// include for the includize stream preprocessor
+// but don't use codecvt (g++-5 or later)
+#define INCLUDIZE_NO_CODECVT 1
+#include <toml.hpp>
+
 // use the new vector which will be default by late 2017
 #define RCPP_NEW_DATE_DATETIME_VECTORS 1
 #include <Rcpp.h>
@@ -252,7 +257,7 @@ SEXP getTable(const std::shared_ptr<cpptoml::table>& t, bool verbose=false) {
                 l.push_back (getTable(ta, verbose));
                 ++ait;
             }
-            sl.push_back(Rcpp::Named(p.first) = l);
+            sl.push_back(Rcpp::Named(p.first) = Rcpp::as<Rcpp::List>(l));
         } else {
             if (verbose) Rcpp::Rcout << "Other: " << p.first << std::endl;
             sl.push_back(p.first); 
@@ -263,7 +268,10 @@ SEXP getTable(const std::shared_ptr<cpptoml::table>& t, bool verbose=false) {
 
 
 // [[Rcpp::export]]
-Rcpp::List tomlparseImpl(const std::string input, bool verbose=false, bool fromfile=true) {
+Rcpp::List tomlparseImpl(const std::string input,
+                         bool verbose=false,
+                         bool fromfile=true,
+                         bool includize=false) {
 
     if (fromfile && access(input.c_str(), R_OK)) {
         Rcpp::stop("Cannot read given file '" + input + "'.");
@@ -272,7 +280,13 @@ Rcpp::List tomlparseImpl(const std::string input, bool verbose=false, bool fromf
     std::shared_ptr<cpptoml::table> g;
 
     if (fromfile) {
-        g = cpptoml::parse_file(input.c_str());
+        if (includize) {
+            includize::toml_preprocessor pp(input.c_str());
+            cpptoml::parser included_parser(pp);
+            g = included_parser.parse();
+        } else {
+            g = cpptoml::parse_file(input.c_str());
+        }
     } else {
         std::stringstream strstream(input);
         cpptoml::parser p(strstream);
@@ -300,7 +314,7 @@ Rcpp::List tomlparseImpl(const std::string input, bool verbose=false, bool fromf
                 l.push_back (getTable(ta, verbose));
                 ++ait;
             }
-            sl.push_back(Rcpp::Named(p.first) = l);
+            sl.push_back(Rcpp::Named(p.first) = Rcpp::as<Rcpp::List>(l));
 
         } else if (p.second->is_table()) {
             auto ga = std::dynamic_pointer_cast<cpptoml::table>(p.second);

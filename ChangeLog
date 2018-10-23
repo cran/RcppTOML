@@ -1,3 +1,63 @@
+2018-10-23  Dirk Eddelbuettel  <edd@debian.org>
+
+	* DESCRIPTION (Version, Date): Release 0.1.4
+
+	* README.md: Added dependencies badge
+
+2018-10-22  Dirk Eddelbuettel  <edd@debian.org>
+
+	* inst/include/cpptoml.h: Synchronised with (fixed) upstream with
+	support for TOML v0.5.0
+
+	* tests/dates_and_times.toml: New tests
+	* tests/dates_and_times.R: Invocation for new tests
+
+2018-09-02  Dirk Eddelbuettel  <edd@debian.org>
+
+	* .travis.yml: Minor update to commented-out PPA for R 3.5
+
+2017-11-16  Dirk Eddelbuettel  <edd@debian.org>
+
+	* inst/include/cpptoml.h: Added '// #nocov' tags
+	* inst/include/includize.hpp: Idem
+	* inst/include/toml.hpp: Idem
+
+2017-11-14  Dirk Eddelbuettel  <edd@debian.org>
+
+	* DESCRIPTION (Version, Date): New minor version
+
+	* src/parse.cpp (tomlparseImpl): New argument 'includize'
+
+	* R/parseToml.R (parseTOML): Support new argument
+	* man/parseTOML.Rd: Document it
+
+	* tests/misc.R: Added test for parse from string, summary()
+	* tests/misc.Rout.save: Reference output
+
+	* src/init.c: Removed, registration now in src/RcppExports.cpp
+
+2017-11-13  Dirk Eddelbuettel  <edd@debian.org>
+
+	* DESCRIPTION (Version, Date): New minor version
+
+	* src/parse.cpp (tomlparseImpl): Add support for includize
+	pre-processor; add its toml.hpp header
+
+	* inst/include/includize.hpp: Included copy from @dcdillon's repo
+	* inst/include/toml.hpp: Idem
+
+	* inst/include/includize.hpp (includize): Do without codecvt
+
+	* .travis.yml: Upgrade gcc and g++ to 4.9
+
+2017-05-02  Dirk Eddelbuettel  <edd@debian.org>
+
+	* src/parse.cpp (tomlparseImpl): Convert the StretchyList to List
+	when inserting so they are seen as Lists in R (cf discussion in #16)
+
+	* tests/arrays.Rout.save: Update reference output
+	* tests/tomlExamples.Rout.save: Idem
+
 2017-04-25  Dirk Eddelbuettel  <edd@debian.org>
 
 	* DESCRIPTION (Version, Date): Release 0.1.3

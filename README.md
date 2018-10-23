@@ -1,4 +1,5 @@
-## RcppTOML [![Build Status](https://travis-ci.org/eddelbuettel/rcpptoml.svg)](https://travis-ci.org/eddelbuettel/rcpptoml) [![License](http://img.shields.io/badge/license-GPL%20%28%3E=%202%29-brightgreen.svg?style=flat)](http://www.gnu.org/licenses/gpl-2.0.html) [![CRAN](http://www.r-pkg.org/badges/version/RcppTOML)](https://cran.r-project.org/package=RcppTOML) [![Downloads](http://cranlogs.r-pkg.org/badges/RcppTOML?color=brightgreen)](http://www.r-pkg.org/pkg/RcppTOML)
+## RcppTOML [![Build
+Status](https://travis-ci.org/eddelbuettel/rcpptoml.svg)](https://travis-ci.org/eddelbuettel/rcpptoml) [![License](http://img.shields.io/badge/license-GPL%20%28%3E=%202%29-brightgreen.svg?style=flat)](http://www.gnu.org/licenses/gpl-2.0.html) [![CRAN](http://www.r-pkg.org/badges/version/RcppTOML)](https://cran.r-project.org/package=RcppTOML) [![Dependencies](https://tinyverse.netlify.com/badge/RcppTOML)](https://cran.r-project.org/package=RcppTOML) [![Downloads](http://cranlogs.r-pkg.org/badges/RcppTOML?color=brightgreen)](http://www.r-pkg.org/pkg/RcppTOML)
 
 Rcpp bindings for [TOML](https://github.com/toml-lang/toml)
 
@@ -6,7 +7,7 @@ Rcpp bindings for [TOML](https://github.com/toml-lang/toml)
 
 [TOML](https://github.com/toml-lang/toml) is a configuration file grammar for
 humans. It is easier to read and edit than the alternatives yet arguably more
-useful as it is stronly types: values come back as integer, double,
+useful as it is strongly typed: values come back as integer, double,
 (multiline-) character (strings), boolean or Datetime. Moreover, complex
 nesting and arrays are supported as well.
 
@@ -100,7 +101,7 @@ install.packages("RcppTOML")
 ```
 
 Development releases may be provided by the
-[ghrr](http://ghrr.github.io/drat) repository which can accessed using via
+[ghrr](http://ghrr.github.io/drat) repository which can accessed via
 
 ```{.r}
 ## if needed, first do:  install.packages("drat")
