@@ -3,19 +3,30 @@
 \newcommand{\ghpr}{\href{https://github.com/eddelbuettel/rcpptoml/pull/#1}{##1}}
 \newcommand{\ghit}{\href{https://github.com/eddelbuettel/rcpptoml/issues/#1}{##1}}
 
+\section{Changes in version 0.1.5 (2018-10-31)}{
+  \itemize{
+    \item Escape characters treatment now has toggle (Václav Hausenblas
+    in \ghpr{27} fixing \ghpr{26})
+    \item The TOML 0.5.0 'time' type is now supported (somewhat) by
+    returning a formatted string (\ghpr{29})
+    \item Encodings are now supported by defaulting to UTF-8 (Václav Hausenblas
+    in \ghpr{30} fixing \ghpr{28})
+  }
+}
+
 \section{Changes in version 0.1.4 (2018-10-23)}{
   \itemize{
     \item Spelling / grammar fixes to README (Jon Calder in \ghpr{18})
     \item Cast from \code{StretchyList} to \code{List} ensures lists
     appear as \code{List} objects in R
     \item Support optional \code{includize} pre-processor for recursive
-    includes by Dan Dillon as a header-only library (\ghpr{21} and \ghpr{22}) 
+    includes by Dan Dillon as a header-only library (\ghpr{21} and \ghpr{22})
     \item Support \code{includize} argument in R and C++ parser interface
-    \item Added a few more \code{#nocov} tags for coverage \ghpr{23}
-    \item Synchronized with new upstream (\ghpr{25})
+    \item Added a few more \code{#nocov} tags for coverage (\ghpr{23})
+    \item Synchronized with new upstream
     \href{https://github.com/skystrife/cpptoml}{cpptoml} version supporting the
-    \href{https://github.com/toml-lang/toml/blob/master/versions/en/toml-v0.5.0.md}{TOMP v0.5.0} 
-    specification. 
+    \href{https://github.com/toml-lang/toml/blob/master/versions/en/toml-v0.5.0.md}{TOMP v0.5.0}
+    specification. (\ghpr{25})
   }
 }
 
@@ -58,7 +69,7 @@
     \item Added Windows support by relying on \code{Rcpp::mktime00()}
     (PR s\ghpr{6} and \ghpr{8} closing \ghit{5} and \ghit{3})
     \item Synchronized with \code{cpptoml} upstream (\ghpr{9})
-    \item Updated Travis CI support via newer \code{run.sh} 
+    \item Updated Travis CI support via newer \code{run.sh}
   }
 }
 
@@ -82,5 +93,3 @@
     \item First CRAN release after four weeks of initial development
   }
 }
-
-
