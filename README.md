@@ -110,11 +110,31 @@ drat::addRepo("ghrr")
 ### Status
 
 Feature-complete with
-[TOML v0.4.0](https://github.com/toml-lang/toml/blob/master/versions/en/toml-v0.4.0.md),
+[TOML v0.5.0](https://github.com/toml-lang/toml/blob/master/versions/en/toml-v0.5.0.md),
 see the [tests/](https://github.com/eddelbuettel/rcpptoml/tree/master/tests)
 directory.  It parses everything that the underlying
 [cpptoml](https://github.com/skystrife/cpptoml) parses with the same (sole)
 exception of unicode escape characters in strings.
+
+### Installation
+
+The package is on [CRAN](https://cran.r-project.org) and can be installed
+via a standard
+
+```r
+install.packages("RcppTOML")
+```
+
+## Continued Testing
+
+As we rely on the [tinytest](https://cran.r-project.org/package=tinytest) package, the
+already-installed package can also be verified via
+
+```r
+tinytest::test_package("RcppTOML")
+```
+
+at any later point.
 
 ### Author
 
