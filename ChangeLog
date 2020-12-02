@@ -1,11 +1,48 @@
+2020-12-01  Dirk Eddelbuettel  <edd@debian.org>
+
+	* man/parseTOML.Rd: Update URL to https://toml.io/en/
+	* man/RcppTOML-package.Rd: Idem
+	* inst/NEWS.Rd: Idem
+	* DESCRIPTION: Idem
+	* README.md: Idem, also update three more URLs
+
+	* .travis.yml: Use r-ci with focal and bspm for CI
+
+2020-11-30  Dirk Eddelbuettel  <edd@debian.org>
+
+	* DESCRIPTION (Version, Date): Roll minor version
+
+	* inst/include/cpptoml.h: Add limits header for g++-11 (also sent
+	upstream as PR #123)
+	* cleanup: Use /bin/sh to not depend on bash [CRAN]
+
+2020-05-23  Dirk Eddelbuettel  <edd@debian.org>
+
+	* DESCRIPTION (Version, Date): Roll minor version
+
+	* README.md: Add 'last commit' badge
+
+	* .travis.yml: Updated to 'bionic' and R 4.0.0
+
+2019-06-29  Dirk Eddelbuettel  <edd@debian.org>
+
+	* .travis.yml (install): Use r-cran-tinytest from PPA
+
+2019-06-26  Dirk Eddelbuettel  <edd@debian.org>
+
+	* DESCRIPTION (SystemRequirements, Description): State g++ requires
+	4.9.3 or newer; remove 'modern' before C++11 as it is standard now
+
 2019-06-25  Dirk Eddelbuettel  <edd@debian.org>
 
-	* DESCRIPTION (Version, Date): Release 0.1.6 
+	* DESCRIPTION (Version, Date): Release 0.1.6
 
-2019-04-27  Václav Hausenblas  <vencahaus@seznam.cz>
+	* README.md (tinytest): Mention post-install testing
+
+2019-06-24  Václav Hausenblas  <vencahaus@seznam.cz>
 
 	* inst/tinytest/test_examples.R: Refine UTF-8 test for Windows
-	
+
 2019-06-24  Dirk Eddelbuettel  <edd@debian.org>
 
 	* inst/tinytest/test_bool_datetime.R: Skip some on tests on Solaris
