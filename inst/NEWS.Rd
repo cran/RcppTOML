@@ -3,12 +3,21 @@
 \newcommand{\ghpr}{\href{https://github.com/eddelbuettel/rcpptoml/pull/#1}{##1}}
 \newcommand{\ghit}{\href{https://github.com/eddelbuettel/rcpptoml/issues/#1}{##1}}
 
+\section{Changes in version 0.2.0 (2023-01-10)}{
+  \itemize{
+    \item Rewritten in C++17 using \pkg{toml++} for TOML v1.0.0 compliance
+    \item Unchanged interface from R, unchanged (and expanded tests)
+    \item Several small continuous integration upgrades since last release
+  }
+}
+
 \section{Changes in version 0.1.7 (2020-12-01)}{
   \itemize{
     \item Add \code{#include <limits>} to header file, also contributed
-    upstream, to permit compilation under the (unreleased) `g++-11`.
-    \item Switch the simple `cleanup` script to `bash`.
-    \item Switch CI use to `r-ci` for focal and \pkg{bspm}.
+    upstream, to permit compilation under the (unreleased) \code{g++-11}.
+    \item Switch the simple \code{cleanup} script to \code{sh}.
+    \item Switch CI use to \href{https://eddelbuettel.github.io/r-ci/}{r-ci}
+    for focal and \pkg{bspm}.
     \item Update several TOML URLs to \code{https://toml.io/en/}.
   }
 }
