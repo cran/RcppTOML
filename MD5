@@ -1,11 +1,11 @@
-013776dd4570a4cd88e2cdb9086c67da *ChangeLog
-f94334301c0119f707c1ce8189175ad9 *DESCRIPTION
+3736e9a46faa830bc9bfd2cf1d8235c2 *ChangeLog
+019e71f6170cc7da57f63194f77ed198 *DESCRIPTION
 8695c7fd3ad2d90aca32137a3da7c0f1 *NAMESPACE
 83198a2f6bb8da2de0780110827fec04 *R/RcppExports.R
 9a65d3a9139d55e53b43d89a7527331c *R/parseToml.R
-227586f86ec0264736c6f6c4611bb262 *README.md
+5ed7642ee555181f1e3f5c0a020a2cdb *README.md
 314cee712fb09b8346fe804ccb77076d *cleanup
-264e3119ae89bee941c7b863de0f8e9c *inst/NEWS.Rd
+8ffe0d2715716ba299f10d59dc172fbe *inst/NEWS.Rd
 3bac4e68873576296adcad5beccc063a *inst/include/toml++/impl/array.h
 e3dc422c50bb339040c536526296f9a9 *inst/include/toml++/impl/array.inl
 640c2ebade62b88f6c024878e9f068fe *inst/include/toml++/impl/at_path.h
@@ -25,9 +25,9 @@ ae38427cc62a83c1a83ad0bcbedcbbf2 *inst/include/toml++/impl/node.inl
 2fa337ce05c4dd286b4ce5a691a7c7e6 *inst/include/toml++/impl/node_view.h
 19d21b846c8e4fdfdc35bc2be7ecacb5 *inst/include/toml++/impl/parse_error.h
 8fa56682ee180132ca222dbcbb05943f *inst/include/toml++/impl/parse_result.h
-329a7d051f1e1f1f329189712c5c2867 *inst/include/toml++/impl/parser.h
+6f12dda294846cc0a3a57d6843ca1aaa *inst/include/toml++/impl/parser.h
 6c56233fd4471838fb3f2c7f09c23124 *inst/include/toml++/impl/parser.inl
-da073be4d277a134fd3252405f401207 *inst/include/toml++/impl/path.h
+e53d70e5a330be5641d13f807815090f *inst/include/toml++/impl/path.h
 6386a5920a8980b297dd3a5ac91015d7 *inst/include/toml++/impl/path.inl
 fb48c1a2ca927bce801c04db733a6c17 *inst/include/toml++/impl/preprocessor.h
 5a7a5ecb7205a4c6cebef4eef9ff8048 *inst/include/toml++/impl/print_to_stream.h
